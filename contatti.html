@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Se sei interessato a quello che faccio perchè non mi mandi una bella mail o mi scrivi un messaggio, oìin questo modo possiamo metterci in contatto">
+    <title>Contatti</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image" href="/assets/img/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+        emailjs.init({
+          publicKey: "AntbH-7SgeIu2ut6H",
+        });
+      })();
+    </script>
+    <script src="assets/js/script.js"></script>
+
+</head>
+<body>
+
+    <!-- Menu Header -->
+
+    <header id="top">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+          <div class="container">
+            <!-- Header Logo -->
+
+            <a class="navbar-brand" href="index.html">
+              <img src="assets/img/logo.png" alt="Logo Francesco Sandali">
+            </a>
+            <!-- Header Mobile -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+              <!-- Menu Centro -->
+
+              <ul class="navbar-nav m-auto mb-2 mt-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html#Cosa faccio">Cosa faccio</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="chisono.html">Chi sono</a></li>
+               </ul>
+
+               <!-- Menu info -->
+
+              <div class="quick-links">
+                <ul class="navbar-nav m-auto mb-2 mt-2 mb-lg-0">
+                  <li class="nav-item dropdown">
+                    <a class="btn btn-primary btn-sm dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="bi bi-chat-fill"></i>
+                    </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="https://t.me/Il_sanda" target="_blank"><i class="bi bi-telegram"></i></a></li>
+                    <li><a class="dropdown-item" href="https://www.instagram.com/_il_sanda_?igsh=MTN0bzJsbnZlazI2cg==" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                    <li><a class="dropdown-item" href="https://www.linkedin.com/in/francesco-sandali-209901244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a class="dropdown-item" href="https://github.com/FrancescoSandali" target="_blank"><i class="bi bi-github"></i></a></li>
+                  </ul>
+                  </li>
+                  <li class="nav-item mx-3"><a class="btn btn-secondary btn-sm" href="contatti.html"><i class="bi bi-telephone-fill"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+  </header>
+    <!-- Contatti -->
+
+    <div class="spacer"></div>
+      <div class="container my-5">
+        <div class="text-center">
+          <p class="h4 text-primary">Hai un idea per il mondo online ma non sai come realizzarla?</p>
+          <h2 class="text-big">Forza mettiamoci in contatto</h2>
+          <h3 class="h2">Parlami del tuo progetto</h3>
+        </div>
+        <div class="row justiy-content-center my-5">
+          <div class="col-12 col-md-6 order-2 order-md-1 mb-5">
+            <h3>Compila il modulo:</h3>
+            <form action="">
+                <div class="form-floating my-5">
+                  <input type="nome" id="nome" placeholder="Mario Rossi" class="form-control" required/>
+                  <label for="nome" class="form-label">Nome:</label>
+                </div>
+                <div class="form-floating my-5">
+                    <input type="email" id="email" placeholder="email@myemail.com" class="form-control" required/>
+                    <label for="email" class="form-label">Email:</label>
+                </div>
+                <label for="oggetto" class="form-label">Sono interessato a:</label>
+                  <select name="oggetto" id="oggetto" class="form-select">
+                    <option value="webdesign">Web Design</option>
+                    <option value="webdeveloper" selected>Web Developer</option>
+                    <option value="seo">Ottimizzazione Seo</option>
+                  </select>
+                <div class="form-floating my-5">
+                  <textarea name="text" id="text" style="height:150px;" class="form-control" placeholder="Parlami del tuo progetto:"></textarea>
+                  <label for="text">Parlami del tuo progetto:</label>
+                </div>
+                <div class="mt-3">
+                  <button type="invia" onclick="sendMail()" class="btn btn-primary">Invia!!</button>
+                </div>
+            </form>
+          </div>
+
+          <div class="col-12 col-md-6 order-2 order-md-1 text-center">
+            <h3>Vuoi una cosa meno formale:</h3>
+            <p class="h4">Scrivimi un messaggio sui social:</p>
+            <ul class="d-flex nav margin justify-content-center mt-3">
+              <li><a href="https://t.me/Il_sanda" target="_blank"><i class="bi bi-telegram"></i></a></li>
+              <li><a href="https://www.instagram.com/_il_sanda_?igsh=MTN0bzJsbnZlazI2cg==" target="_blank"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/francesco-sandali-209901244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+              <li><a href="https://github.com/FrancescoSandali" target="_blank"><i class="bi bi-github"></i></a></li>
+            </ul>
+            
+          </div>
+
+
+
+
+
+
+      </div>
+    </div>
+
+    
+
+   
+
+    <!-- footer -->
+     
+    <footer class="bg-dark text-white mt-5">
+      <div class="container py-5">
+
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/img/logo.png" alt="Logo Francesco Sandali">
+        </a>
+
+          <div class="row mt-5">
+              <div class="col-md-4 mt-5">
+                  <h5 class="text-primary">Cosa faccio</h5>
+
+                  <div class="footer_nav">
+                    <nav>
+                      <ul class="nav flex-column ">
+                        <li class="nav-item"><a href="index.html#WebDesign">Web design</a></li>
+                        
+                        <li class="nav-item"><a href="index.html#WebDeveloper">Web developer</a></li>
+                        <li class="nav-item"><a href="index.html#Seo">Ottimizzazione SEO</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+              </div>
+
+              <div class="col-md-4 mt-5 text-center">
+                  <h5 class="text-primary">Lin utili</h5>
+
+                  <div class="footer_nav">
+                    <nav>
+                      <ul class="nav flex-column ">
+                        <li class="nav-item"><a href="chisono.html">Chi sono</a></li>
+                        <li class="nav-item"><a href="contatti.html">Contatti</a></li>
+                        <li class="nav-item"><a href="#top">Top &nbsp<i class="bi bi-arrow-up"></i></a></li>
+                      </ul>
+                    </nav>
+                  </div>
+              </div>
+
+              <div class="col-md-4 mt-5 text-end">
+                <h5 class="text-primary">Segimi sui social</h5>
+                <div class="footer_nav d-inline-flex p-2">
+                  <nav>
+                    <ul class="nav margin">
+                      <li><a href="https://t.me/Il_sanda" target="_blank"><i class="bi bi-telegram"></i></a></li>
+                      <li><a href="https://www.instagram.com/_il_sanda_?igsh=MTN0bzJsbnZlazI2cg==" target="_blank"><i class="bi bi-instagram"></i></a></li>
+                      <li><a href="https://www.linkedin.com/in/francesco-sandali-209901244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                      <li><a href="https://github.com/FrancescoSandali" target="_blank"><i class="bi bi-github"></i></a></li>
+                      
+                    </ul>
+                  </nav>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="bg-secondary text-center py-2">
+          <p class="mb-0">&copy; 2024 Francesco Sandali. Tutti i diritti riservati.</p>
+      </div>
+  </footer>
+
+
+      
+    
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>   
+</body>
+</html>
