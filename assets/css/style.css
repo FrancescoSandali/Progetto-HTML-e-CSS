@@ -1,4 +1,4 @@
-/* ! Aggiustamenti Body e Generali*/
+/* ! Fix Body and General CSS */
 *{
     padding: 0;
     margin: 0;
@@ -46,7 +46,7 @@ body{
 }
 
 
-/* ! Aggiustamenti Bootstrap Header Menu*/
+/* ! Fix Bootstrap Header Menu */
 
 .nav-link {
     margin-left:20px;
@@ -82,7 +82,7 @@ body{
 }
 
 
-/* ! Classi aggiuntive */
+/* ! Add Classes CSS there isn't include to Bootstrap Library */
 .hero {
     margin-top:-50px!important;
     min-height: 100vh;
@@ -139,7 +139,35 @@ body{
   }
 
 
-/* ! Aggiustamenti Mobile */
+  /* ! Animation */
+
+  .bounce{
+    animation: bounce 1s infinite;
+  }
+
+  @keyframes bounce {
+    30% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(0);
+    }
+  }
+
+  .rotates{
+    animation: rotates_effect 3s infinite ease-in-out;
+  }
+
+@keyframes rotates_effect{
+	0% {transform:rotate(0deg);}
+	20% {transform:rotate(0deg);}
+	40% {transform:rotate(-10deg);}
+	60% {transform:rotate(10deg);}
+	80% {transform:rotate(0deg);}
+	100% {transform:rotate(0deg);}
+}
+
+/* ! Fix Mobile */
 
 @media (max-width: 768px) {
 
