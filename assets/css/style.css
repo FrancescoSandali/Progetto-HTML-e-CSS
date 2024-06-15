@@ -21,11 +21,17 @@ body{
     --bs-btn-border-color:none;
     --bs-btn-hover-color: #fff;
     --bs-btn-hover-bg:color-mix(in srgb,#EF4565,black 20%)!important;
-    --bs-btn-hover-border-color:none;
     --bs-btn-active-color: #fff;
     --bs-btn-active-bg: #EF4565!important;
     --bs-btn-active-border-color:#EF4565!important;
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
 }
+
+.btn:hover{
+    transform: scale(1.2)!important;
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
 
 .footer_nav nav ul li{
     margin-top:20px;
