@@ -40,9 +40,12 @@ body{
 .footer_nav nav ul a{
     text-decoration: none;
     color:#EF4565;
+    transition: all 0.7s cubic-bezier(.215, .61, .355, 1);
 }
 .footer_nav nav ul a:hover{
     color:color-mix(in srgb,#EF4565,black 20%);
+    text-decoration: underline;
+    
 }
 
 
@@ -51,10 +54,6 @@ body{
    font-size:1.2rem;
 }
 
-.scale:hover{
-  transform: scale(1.2)!important;
-  transition: all 1s cubic-bezier(.215, .61, .355, 1);
-}
 
 
 /* ! Fix Bootstrap Header Menu */
@@ -62,10 +61,12 @@ body{
 .nav-link {
     margin-left:20px;
     color:#fff!important;
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
 }
 
 .nav-link:hover{
-    color:color-mix(in srgb,#EF4565,black 20%)!important;;
+    color:color-mix(in srgb,#EF4565,black 20%)!important;
+    text-decoration: underline;
 }
 
 .dropdown-menu.show{
@@ -85,6 +86,13 @@ body{
 .navbar-brand img{
     width:70px;
     height:70px;
+    transition: all 0.7s cubic-bezier(.215, .61, .355, 1);
+}
+
+
+.navbar-brand img:hover{
+  filter: invert(1);
+
 }
 
 .quick-links{
@@ -142,6 +150,7 @@ body{
 
   .card{
     background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    
   }
 
   .card-img-top{
@@ -154,6 +163,7 @@ body{
 
   .bounce{
     animation: bounce 1s infinite;
+    box-shadow: 0px 45px 20px -30px rgba( 0,0,0,0.2);
   }
 
   @keyframes bounce {
