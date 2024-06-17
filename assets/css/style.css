@@ -47,8 +47,13 @@ body{
 
 
 .margin li{
-   margin-right: 20px;
+   margin-right:30px;
    font-size:1.2rem;
+}
+
+.scale:hover{
+  transform: scale(1.2)!important;
+  transition: all 1s cubic-bezier(.215, .61, .355, 1);
 }
 
 
